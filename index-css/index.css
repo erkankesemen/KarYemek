@@ -20,7 +20,13 @@ body {
 
 
 .custom-style-h1 {
-
+  font-family: "Open Sans", serif;
+  font-weight: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  font-size: xxx-large;
+  color: white;
+  text-align: left;
 }
 
 .custom-style-h2 {
@@ -28,7 +34,7 @@ body {
   font-weight: 100;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
-  font-size: xxx-large;
+  font-size: xx-large;
   color: white;
   text-align: left;
 }

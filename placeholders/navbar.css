@@ -1,0 +1,65 @@
+/* Genel yazı stili */
+body, .navbar-nav .nav-link {
+    font-family: 'Open Sans', sans-serif; /* Open Sans yazı tipi */
+    font-weight: 100;
+}
+
+/* Navbar background and text color */
+.navbar-custom {
+    background-color: #f8f9fa; /* Açık gri ton (klasik) */
+    border-bottom: 1px solid #dee2e6; /* Hafif alt çizgi */
+}
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Liste elemanları arasındaki sağ mesafeyi artırır */
+}
+
+.navbar-nav .nav-link {
+    color: #343a40; /* Varsayılan koyu gri renk */
+    font-weight: 500;
+    position: relative; /* Pseudo-element için gerekli */
+    transition: color 0.3s ease-in-out; /* Renk geçişi */
+}
+
+/* Hover durumunda alt çizgi */
+.navbar-nav .nav-link::after {
+    content: ""; /* Pseudo-element içeriği */
+    position: absolute;
+    bottom: 0; /* Çizgi alt kısımda olacak */
+    left: 0; /* Çizgi başlangıcı sol */
+    width: 0; /* Başlangıç genişliği 0 */
+    height: 2px; /* Çizgi kalınlığı */
+    background-color: #001f3f; /* Lacivert renk */
+    transition: width 0.3s ease-in-out; /* Çizgi genişleme animasyonu */
+}
+
+/* Hover durumunda çizgi genişlesin */
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Çizgi tamamen genişler */
+}
+
+/* Active link styling */
+.navbar-nav .nav-link.active {
+    color: #007bff; /* Aktif link rengi */
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link.active::after {
+    width: 100%; /* Aktif durumda çizgi sürekli tam genişlikte */
+    background-color: #001f3f; /* Lacivert renk */
+}
+
+/* Navbar-toggler */
+.navbar-toggler {
+    border: none;
+}
+
+/* Logo styling */
+.navbar-brand img {
+    height: 80px; /* Logo boyutlandırması */
+    max-width: 100%;
+}
+
+/* Responsive font sizes */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
