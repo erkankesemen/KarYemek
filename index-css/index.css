@@ -16,20 +16,75 @@ html {
 body {
   margin-bottom: 0;
   background-color: var(--kar-beyaz); /* Background color for the body */
-  font-family: Arial, sans-serif; /* Default font for the page */
 }
 
-h1 {
-  color: var(--kar-koyu); /* Dark color for the main heading */
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
 
-p {
-  color: var(--kar-gri); /* Secondary color for paragraphs */
+.custom-style-h1 {
 
 }
 
+.custom-style-h2 {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  font-size: xxx-large;
+  color: white;
+  text-align: left;
+}
+
+.custom-style-h3 {
+  
+}
+
+.custom-style-h4 {
+  
+}
+
+.custom-style-h5 {
+  
+}
+
+.custom-style-p {
+  
+}
 footer p {
     color: white; 
+}
+
+.custom-height {
+  min-height: 300px; /* Satırı dikey olarak genişletir */
+}
+
+
+.bg-common::before {
+  content: "";
+  position: relative;
+  background-size: cover; /* Görüntüyü kapsar */
+  background-position: center; /* Görüntüyü ortalar */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.bg-section1::before {
+  background-image: url('/visual-elements/backgrounds/food-list-1.jpg');
+}
+
+.bg-section2::before {
+  background-image: url('/visual-elements/backgrounds/food-service-1.jpg');
+}
+
+.bg-section3::before {
+  background-image: url('/visual-elements/backgrounds/office-coffee-1.jpg');
+}
+
+.bg-section4::before {
+  background-image: url('/visual-elements/backgrounds/social-media-1.jpg');
+}
+
+.text-white {
+  color: white; /* Metin rengini beyaz yapar */
 }
