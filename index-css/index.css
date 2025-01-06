@@ -118,7 +118,7 @@ a.text-decoration-none .bg-common::before {
 }
 
 .service-card:hover .bg-common {
-  background-color: rgba(0, 38, 255, 0.7); /* Arka planı görünmez yap */
+  background-color: rgba(30, 30, 30, 0.8); /* Arka planı görünmez yap */
   transition: background-color 0.5s ease-in-out; /* Arka plan geçiş süresi */
 }
 
