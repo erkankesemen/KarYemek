@@ -21,7 +21,7 @@ body {
 
 .custom-style-h1 {
   font-family: "Open Sans", serif;
-  font-weight: 100;
+  font-weight: 400;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   font-size: xxx-large;
@@ -31,7 +31,7 @@ body {
 
 .custom-style-h2 {
   font-family: "Open Sans", serif;
-  font-weight: 100;
+  font-weight: 400;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   font-size: xx-large;
@@ -91,6 +91,39 @@ body {
   background-image: url('/visual-elements/backgrounds/social-media-1.jpg');
 }
 
-.text-white {
-  color: white; /* Metin rengini beyaz yapar */
+/* Genel hover efekti için */
+a.text-decoration-none .bg-common {
+  transform: scale(1); /* Varsayılan boyut */
+  box-shadow: none; /* Varsayılan gölge yok */
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Geçiş animasyonu */
 }
+
+/* Hover durumunda efekt */
+a.text-decoration-none:hover .bg-common {
+  transform: scale(1.05); /* Hafif büyüme efekti */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Kenar gölgesi */
+}
+
+/* Yazı hover efekti */
+a.text-decoration-none h1,
+a.text-decoration-none h2 {
+  color: #ffffff;
+  transition: color 0.5s ease-in-out; /* Geçiş animasyonu */
+}
+
+/* Hover durumunda yazı rengi */
+a.text-decoration-none:hover h1,
+a.text-decoration-none:hover h2 {
+  color: #ffffff;
+}
+
+/* Arka plan opaklığı için efekt */
+a.text-decoration-none .bg-common::before {
+  opacity: 0.8; /* Varsayılan opaklık */
+  transition: opacity 0.5s ease-in-out; /* Geçiş animasyonu */
+}
+
+a.text-decoration-none:hover .bg-common::before {
+  opacity: 0.9; /* Hover sırasında opaklık */
+}
+
