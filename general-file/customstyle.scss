@@ -1,0 +1,16 @@
+
+@use "node_modules/bootstrap/scss/bootstrap" as *;
+
+
+$display-font-sizes: (
+  1: 600rem,
+  2: 5.5rem,
+  3: 5rem,
+  4: 4.5rem,
+  5: 4rem,
+  6: 3.5rem
+);
+
+
+@use "node_modules/bootstrap/scss/reboot" as *;
+@use "node_modules/bootstrap/scss/utilities" as *;
