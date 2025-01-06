@@ -15,7 +15,6 @@ html {
 
 body {
   margin-bottom: 0;
-  background-color: var(--kar-beyaz); /* Background color for the body */
 }
 
 
@@ -57,7 +56,7 @@ body {
 
 
 .custom-height {
-  min-height: 300px; /* Satırı dikey olarak genişletir */
+  min-height: 350px; /* Satırı dikey olarak genişletir */
 }
 
 
@@ -71,7 +70,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 1;
   z-index: -1;
 }
 
@@ -104,26 +103,76 @@ a.text-decoration-none:hover .bg-common {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Kenar gölgesi */
 }
 
-/* Yazı hover efekti */
-a.text-decoration-none h1,
-a.text-decoration-none h2 {
-  color: #ffffff;
-  transition: color 0.5s ease-in-out; /* Geçiş animasyonu */
-}
-
-/* Hover durumunda yazı rengi */
-a.text-decoration-none:hover h1,
-a.text-decoration-none:hover h2 {
-  color: #ffffff;
-}
-
 /* Arka plan opaklığı için efekt */
 a.text-decoration-none .bg-common::before {
-  opacity: 0.8; /* Varsayılan opaklık */
+  opacity: 1; /* Varsayılan opaklık */
   transition: opacity 0.5s ease-in-out; /* Geçiş animasyonu */
 }
 
-a.text-decoration-none:hover .bg-common::before {
-  opacity: 0.9; /* Hover sırasında opaklık */
+/* Hizmetlerimiz Kutusu */
+/* Genel Kurumsal Kart */
+.service-card {
+  position: relative;
+  z-index: 1;
+  transition: background-color 1s ease-in-out; /* Arka plan geçiş animasyonu */
+}
+
+.service-card:hover .bg-common {
+  background-color: rgba(0, 38, 255, 0.7); /* Arka planı görünmez yap */
+  transition: background-color 0.5s ease-in-out; /* Arka plan geçiş süresi */
+}
+
+.service-card:hover h2 {
+  opacity: 0; /* "Yemek Çeşitlerimiz" yazısını görünmez yap */
+  transition: opacity 0.3s ease-in-out; /* Yazının kaybolma süresi */
+}
+
+/* Liste */
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* İki eşit sütun */
+  gap: 10px; /* Sütun ve satırlar arasında boşluk */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0; /* Başlangıçta görünmez */
+  transition: opacity 0.5s ease-in-out; /* Görünürlük geçiş süresi */
+  font-weight: 400;
+}
+
+.service-card:hover .service-list {
+  opacity: 1; /* Hover sırasında liste görünür hale gelir */
+}
+
+/* Liste Elemanları */
+.service-list li {
+  padding: 5px 10px;
+}
+
+.service-list li a {
+  color: #ffffff; /* Varsayılan yazı rengi */
+  font-weight: 400;
+  text-decoration: none; /* Alt çizgiyi başlangıçta kaldır */
+  position: relative; /* Pseudo-element için gerekli */
+  transition: color 0.3s ease-in-out; /* Yazı rengi geçiş animasyonu */
+}
+
+.service-list li a::after {
+  content: ""; /* Pseudo-element içeriği boş */
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Alt çizgi için konum */
+  width: 0; /* Başlangıçta çizgi görünmez */
+  height: 2px; /* Çizgi kalınlığı */
+  background-color: white; /* Çizgi rengi */
+  transition: width 0.3s ease-in-out; /* Çizgi genişleme animasyonu */
+}
+
+.service-list li a:hover {
+  color: white; /* Hover sırasında açık mavi yazı rengi */
+}
+
+.service-list li a:hover::after {
+  width: 100%; /* Hover sırasında çizgi tam genişler */
 }
 
