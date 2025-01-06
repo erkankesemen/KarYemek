@@ -24,6 +24,8 @@ body {
 }
 
 .custom-style-h2 {
+  font-family: "Open Sans", serif;
+  font-weight: 100;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   font-size: xxx-large;
@@ -46,9 +48,7 @@ body {
 .custom-style-p {
   
 }
-footer p {
-    color: white; 
-}
+
 
 .custom-height {
   min-height: 300px; /* Satırı dikey olarak genişletir */
