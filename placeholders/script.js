@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    const progressValue = document.getElementById("progress-value");
+    const content = document.getElementById("content");
+    const loadingScreen = document.getElementById("loading-screen");
+
+    let progress = 0;
+
+    const interval = setInterval(() => {
+        progress += 5;
+        progressValue.textContent = `${progress}%`;
+
+        if (progress >= 100) {
+            clearInterval(interval);
+            loadingScreen.style.display = "none";
+            content.style.display = "block";
+        }
+    }, 100); 
+
+
+    
     // Navbar yükleme
     fetch('/placeholders/navbar.html')
         .then(response => response.text())
