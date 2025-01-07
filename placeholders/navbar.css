@@ -1,12 +1,12 @@
 /* Genel yazı stili */
 body, .navbar-nav .nav-link {
     font-family: 'Open Sans', sans-serif; /* Open Sans yazı tipi */
-    font-weight: 100;
+    font-weight: 400 !important;
 }
 
 /* Navbar background and text color */
 .navbar-custom {
-    background-color: #f8f9fa; /* Açık gri ton (klasik) */
+    background-color: #ffffff; /* Açık gri ton (klasik) */
     border-bottom: 1px solid #dee2e6; /* Hafif alt çizgi */
 }
 .navbar-nav .nav-item {
@@ -14,7 +14,7 @@ body, .navbar-nav .nav-link {
 }
 
 .navbar-nav .nav-link {
-    color: #343a40; /* Varsayılan koyu gri renk */
+    color: #5e5e5e; /* Varsayılan koyu gri renk */
     font-weight: 500;
     position: relative; /* Pseudo-element için gerekli */
     transition: color 0.3s ease-in-out; /* Renk geçişi */
@@ -27,20 +27,14 @@ body, .navbar-nav .nav-link {
     bottom: 0; /* Çizgi alt kısımda olacak */
     left: 0; /* Çizgi başlangıcı sol */
     width: 0; /* Başlangıç genişliği 0 */
-    height: 2px; /* Çizgi kalınlığı */
-    background-color: #001f3f; /* Lacivert renk */
+    height: 1px !important; /* Çizgi kalınlığı */
+    background-color: #343a40 !important; /* Lacivert renk */
     transition: width 0.3s ease-in-out; /* Çizgi genişleme animasyonu */
 }
 
 /* Hover durumunda çizgi genişlesin */
 .navbar-nav .nav-link:hover::after {
     width: 100%; /* Çizgi tamamen genişler */
-}
-
-/* Active link styling */
-.navbar-nav .nav-link.active {
-    color: #007bff; /* Aktif link rengi */
-    font-weight: 600;
 }
 
 .navbar-nav .nav-link.active::after {
@@ -55,8 +49,15 @@ body, .navbar-nav .nav-link {
 
 /* Logo styling */
 .navbar-brand img {
-    height: 80px; /* Logo boyutlandırması */
+    height: 75px; /* Logo boyutlandırması */
     max-width: 100%;
+    transform: scale(1); /* Varsayılan boyut */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Animasyon geçişleri */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05); /* Hover durumunda hafif büyüme */
+    filter: brightness(1.2); /* Parlaklık %150 */
 }
 
 /* Responsive font sizes */

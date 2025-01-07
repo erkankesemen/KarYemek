@@ -55,7 +55,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 10px solid #66c068;
+  border: 10px solid #3B5276;
   border-radius: 50%;
   border-top-color: transparent;
   border-right-color: transparent;
@@ -100,7 +100,24 @@ html {
 
 body {
   margin-bottom: 0;
+  opacity: 1;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #fff8f8;
+  background: linear-gradient(135deg, #f3f3f355 25%, transparent 25%) -23px 0/ 46px 46px, 
+              linear-gradient(225deg, #f3f3f3 25%, transparent 25%) -23px 0/ 46px 46px, 
+              linear-gradient(315deg, #f3f3f355 25%, transparent 25%) 0px 0/ 46px 46px, 
+              linear-gradient(45deg, #f3f3f3 25%, #fff8f8 25%) 0px 0/ 46px 46px;
+  filter: blur(2px);
+  }
 
 
 .custom-style-h1 {
