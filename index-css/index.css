@@ -75,7 +75,7 @@ body {
 }
 
 .bg-section1::before {
-  background-image: url('/visual-elements/backgrounds/food-list-1.jpg');
+  background-image: url('/visual-elements/backgrounds/food-list-3.jpg');
 }
 
 .bg-section2::before {
@@ -114,11 +114,16 @@ a.text-decoration-none .bg-common::before {
 .service-card {
   position: relative;
   z-index: 1;
-  transition: background-color 1s ease-in-out; /* Arka plan geçiş animasyonu */
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 1s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Kutu boyutunu büyüt */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
 }
 
 .service-card:hover .bg-common {
-  background-color: rgba(30, 30, 30, 0.8); /* Arka planı görünmez yap */
+  background-color: rgba(30, 30, 30, 0.8); /* Arka planı yarı saydam yap */
   transition: background-color 0.5s ease-in-out; /* Arka plan geçiş süresi */
 }
 
