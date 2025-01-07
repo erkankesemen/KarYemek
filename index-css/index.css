@@ -56,7 +56,7 @@ body {
 
 
 .custom-height {
-  min-height: 350px; /* Satırı dikey olarak genişletir */
+  min-height: 325px; /* Satırı dikey olarak genişletir */
 }
 
 
@@ -138,6 +138,11 @@ a.text-decoration-none .bg-common::before {
   opacity: 0; /* Başlangıçta görünmez */
   transition: opacity 0.5s ease-in-out; /* Görünürlük geçiş süresi */
   font-weight: 400;
+}
+.service-list li{
+  margin-left: 5%;
+
+
 }
 
 .service-card:hover .service-list {
