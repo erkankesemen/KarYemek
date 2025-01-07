@@ -1,3 +1,88 @@
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.progress-ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+#progress-value {
+  z-index: 2;
+}
+
+.progress-ring::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #e6e6e6;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.progress-ring::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #66c068;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  box-sizing: border-box;
+  animation: progress-spin 1s linear infinite;
+}
+
+@keyframes progress-spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+
+
+
+
+
 html {
   font-size: 14px;
 }
@@ -56,7 +141,7 @@ body {
 
 
 .custom-height {
-  min-height: 350px; /* Satırı dikey olarak genişletir */
+  min-height: 325px; /* Satırı dikey olarak genişletir */
 }
 
 
@@ -143,6 +228,11 @@ a.text-decoration-none .bg-common::before {
   opacity: 0; /* Başlangıçta görünmez */
   transition: opacity 0.5s ease-in-out; /* Görünürlük geçiş süresi */
   font-weight: 400;
+}
+.service-list li{
+  margin-left: 5%;
+
+
 }
 
 .service-card:hover .service-list {
