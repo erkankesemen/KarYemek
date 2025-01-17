@@ -37,8 +37,16 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error('Navbar yüklenemedi:', error));
 
-    // Footer yükleme
-    fetch('/placeholders/footer.html')
+    fetch('/placeholders/yemek-cesitleri-placeholder.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('yemek-cesitleri-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('yemek çeşitleri yüklenemedi:', error));
+
+
+
+        fetch('/placeholders/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
